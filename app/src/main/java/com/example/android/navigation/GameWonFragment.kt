@@ -47,6 +47,7 @@ class GameWonFragment : Fragment() {
 
         //check if the implicit intent resolves
         if (null == getShareIntent().resolveActivity(activity!!.packageManager)){
+            // hide the menu item if it does not resolve
             menu.findItem(R.id.share)?.setVisible(false)
         }
     }
